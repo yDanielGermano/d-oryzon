@@ -5,112 +5,243 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D-Oryzon | Soluções em Tecnologia</title>
     <style>
+        :root {
+            --bg-color: #000000;
+            --card-bg: #0a0a12;
+            --text-color: #ffffff;
+            --text-muted: #b3b3b3;
+            --primary-blue: #0026ff;
+            --primary-purple: #8000ff;
+            --border-color: #1a1a3a;
+        }
+
         body {
-            background-color: #000000;
-            color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
             margin: 0;
             padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 50px 20px 30px 20px;
+            background: linear-gradient(180deg, #020210 0%, #000000 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
         }
-        header {
-            padding: 40px 20px;
-            background: linear-gradient(180deg, #111111 0%, #000000 100%);
+
+        .logo-container {
+            width: 100%;
+            max-width: 280px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
         }
-        .logo-text {
-            font-size: 2.5em;
-            font-weight: bold;
-            letter-spacing: 2px;
-            margin: 0;
+
+        .logo-img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
         }
+
         .subtitle {
-            color: #aaaaaa;
-            font-size: 1.1em;
-            margin-top: 10px;
-        }
-        .container {
-            max-width: 800px;
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            max-width: 600px;
             margin: 0 auto;
-            padding: 20px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
         }
-        .video-container {
-            background-color: #111111;
-            border: 1px solid #333333;
-            border-radius: 8px;
-            padding: 20px;
+
+        .container {
+            width: 90%;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #3a61ff, #b300ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .video-section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
             margin: 30px 0;
+            box-shadow: 0 8px 32px rgba(128, 0, 255, 0.05);
+            text-align: center;
         }
-        .services {
+
+        .video-section p {
+            color: var(--text-muted);
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #222;
+            background-color: #000;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .services-grid {
             display: flex;
             flex-direction: column;
             gap: 20px;
-            text-align: left;
             margin: 30px 0;
         }
+
         .service-card {
-            background-color: #0a0a0a;
-            border-left: 4px solid #ffffff;
-            padding: 20px;
-            border-radius: 0 8px 8px 0;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-left: 5px solid transparent;
+            /* Aplica o efeito de borda com a paleta da logo */
+            border-image: linear-gradient(180deg, var(--primary-blue), var(--primary-purple)) 1 100%;
+            padding: 25px;
+            border-radius: 0 12px 12px 0;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
+
+        .service-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 20px rgba(0, 38, 255, 0.1);
+        }
+
         .service-card h3 {
             margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+            color: #ffffff;
         }
+
+        .service-card p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 0.98rem;
+        }
+
+        .cta-container {
+            text-align: center;
+            margin: 50px 0;
+        }
+
         .btn-contact {
             display: inline-block;
-            background-color: #ffffff;
-            color: #000000;
-            padding: 15px 30px;
-            font-weight: bold;
+            background: linear-gradient(90deg, var(--primary-blue) 0%, var(--primary-purple) 100%);
+            color: #ffffff;
+            padding: 16px 35px;
+            font-weight: 600;
             text-decoration: none;
-            border-radius: 5px;
-            margin: 20px 0;
-            font-size: 1.1em;
-            transition: background 0.3s;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(128, 0, 255, 0.3);
+            transition: opacity 0.2s, transform 0.2s;
         }
+
         .btn-contact:hover {
-            background-color: #cccccc;
+            transform: translateY(-2px);
+            opacity: 0.9;
         }
+
         footer {
-            padding: 30px;
-            color: #555555;
-            font-size: 0.9em;
+            padding: 40px 20px;
+            text-align: center;
+            color: #444455;
+            font-size: 0.85rem;
+            border-top: 1px solid #111;
+        }
+
+        /* Responsividade para telas maiores (computadores/tablets deitados) */
+        @media (min-width: 768px) {
+            .services-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 25px;
+            }
+            
+            .service-card {
+                border-radius: 0 0 12px 12px;
+                border-left: 1px solid var(--border-color);
+                border-top: 5px solid transparent;
+                border-image: linear-gradient(90deg, var(--primary-blue), var(--primary-purple)) 1 100%;
+            }
+
+            .service-card:hover {
+                transform: translateY(-5px);
+            }
+            
+            h2 {
+                font-size: 2.1rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <p class="logo-text">D-ORYZON</p>
+        <div class="logo-container">
+            <!-- Salve sua imagem com fundo transparente como logo.png na mesma pasta do index.html -->
+            <img src="logo.png" alt="D-Oryzon Logo" class="logo-img">
+        </div>
         <p class="subtitle">Automação Inteligente e Suporte Tecnológico Especializado</p>
     </header>
 
     <div class="container">
         
-        <div class="video-container">
+        <section class="video-section">
             <h2>Demonstração Prática</h2>
-            <p style="color: #cccccc;">Veja em tempo real o funcionamento do nosso sistema inteligente de monitoramento térmico preventivo para freezers e balcões comerciais.</p>
-            <!-- Substitua o link abaixo pelo link do seu vídeo após subir no YouTube ou drive publico -->
-            <p><strong>https://drive.google.com/file/d/1DLQEs9eMRE3sZC-6i8lkifp25Qx6YPxL/view?usp=sharing</strong></p>
+            <p>Monitore a temperatura de freezers e balcões comerciais preventivamente e evite a perda de mercadorias.</p>
+            
+            <div class="video-wrapper">
+                <!-- Certifique-se de salvar o arquivo como "11261.mp4" na mesma pasta do site no seu GitHub -->
+                <video controls preload="metadata" poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                    <source src="11261.mp4" type="video/mp4">
+                    Seu navegador não suporta a reprodução de vídeos.
+                </video>
+            </div>
+        </section>
+
+        <h2 style="margin-top: 40px;">Nossos Serviços</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Sistemas Embarcados</h3>
+                <p>Desenvolvimento e programação de firmwares sob medida para automação comercial e controle de ativos em tempo real.</p>
+            </div>
+            <div class="service-card">
+                <h3>Infraestrutura de Rede</h3>
+                <p>Planejamento, instalação e otimização de cobertura Wi-Fi e cabeamento estruturado para o comércio local.</p>
+            </div>
+            <div class="service-card">
+                <h3>Suporte & Hardware</h3>
+                <p>Montagem especializada, otimização de sistemas operacionais e manutenção de computadores de alto desempenho.</p>
+            </div>
         </div>
 
-        <h2>Nossos Serviços</h2>
-        <div class="services">
-            <div class="service-card">
-                <h3>Monitoramento de Ativos e Automação</h3>
-                <p>Desenvolvimento e instalação de sensores inteligentes para controle de temperatura e prevenção de perdas de mercadorias em tempo real.</p>
-            </div>
-            <div class="service-card">
-                <h3>Infraestrutura de Rede e Conectividade</h3>
-                <p>Planejamento, instalação e otimização de redes Wi-Fi e cabeamento estruturado para empresas e comércios locais.</p>
-            </div>
-            <div class="service-card">
-                <h3>Suporte e Manutenção de Hardware</h3>
-                <p>Montagem, otimização e manutenção especializada de computadores, servidores locais e notebooks para alta performance empresarial.</p>
-            </div>
+        <div class="cta-container">
+            <!-- Insira seu número com DDD após o / no link abaixo -->
+            <a href="https://wa.me/SEUNUMERODEWHATSAPP" class="btn-contact" target="_blank">Falar com Especialista no WhatsApp</a>
         </div>
-
-        <a href="https://wa.me/5511967386410" class="btn-contact" target="_blank">Falar com Especialista no WhatsApp</a>
 
     </div>
 
