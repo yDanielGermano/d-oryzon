@@ -6,13 +6,14 @@
     <title>D-Oryzon | Soluções em Tecnologia</title>
     <style>
         :root {
-            --bg-color: #000000;
-            --card-bg: #0a0a12;
+            /* Cor exata do fundo da nova logo para perfeita integração */
+            --bg-color: #020916; 
+            --card-bg: #061125;
             --text-color: #ffffff;
-            --text-muted: #b3b3b3;
-            --primary-blue: #0026ff;
-            --primary-purple: #8000ff;
-            --border-color: #1a1a3a;
+            --text-muted: #a3b8cc;
+            --accent-green: #39ff14; /* Verde fósforo */
+            --accent-orange: #ff5e00; /* Pôr do sol */
+            --border-color: #0d2347;
         }
 
         body {
@@ -26,7 +27,7 @@
 
         header {
             padding: 50px 20px 30px 20px;
-            background: linear-gradient(180deg, #020210 0%, #000000 100%);
+            background: linear-gradient(180deg, #01050e 0%, var(--bg-color) 100%);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -35,7 +36,7 @@
 
         .logo-container {
             width: 100%;
-            max-width: 280px;
+            max-width: 320px;
             margin-bottom: 20px;
             display: flex;
             justify-content: center;
@@ -66,10 +67,25 @@
         h2 {
             font-size: 1.8rem;
             margin-bottom: 20px;
-            background: linear-gradient(45deg, #3a61ff, #b300ff);
+            background: linear-gradient(45deg, var(--accent-green), var(--accent-orange));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             display: inline-block;
+        }
+
+        /* Novas Seções: Sobre e Objetivos */
+        .info-section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+
+        .info-section p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 15px;
         }
 
         .video-section {
@@ -78,7 +94,6 @@
             border-radius: 12px;
             padding: 25px;
             margin: 30px 0;
-            box-shadow: 0 8px 32px rgba(128, 0, 255, 0.05);
             text-align: center;
         }
 
@@ -94,7 +109,7 @@
             width: 100%;
             border-radius: 8px;
             overflow: hidden;
-            border: 1px solid #222;
+            border: 1px solid var(--border-color);
             background-color: #000;
         }
 
@@ -115,8 +130,7 @@
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-left: 5px solid transparent;
-            /* Aplica o efeito de borda com a paleta da logo */
-            border-image: linear-gradient(180deg, var(--primary-blue), var(--primary-purple)) 1 100%;
+            border-image: linear-gradient(180deg, var(--accent-green), var(--accent-orange)) 1 100%;
             padding: 25px;
             border-radius: 0 12px 12px 0;
             transition: transform 0.2s, box-shadow 0.2s;
@@ -124,7 +138,7 @@
 
         .service-card:hover {
             transform: translateX(5px);
-            box-shadow: 0 4px 20px rgba(0, 38, 255, 0.1);
+            box-shadow: 0 4px 20px rgba(57, 255, 20, 0.1);
         }
 
         .service-card h3 {
@@ -147,15 +161,15 @@
 
         .btn-contact {
             display: inline-block;
-            background: linear-gradient(90deg, var(--primary-blue) 0%, var(--primary-purple) 100%);
-            color: #ffffff;
+            background: linear-gradient(90deg, var(--accent-green) 0%, var(--accent-orange) 100%);
+            color: #000000; /* Preto para dar contraste no botão claro */
             padding: 16px 35px;
-            font-weight: 600;
+            font-weight: 700;
             text-decoration: none;
             border-radius: 30px;
             font-size: 1.1rem;
             letter-spacing: 0.5px;
-            box-shadow: 0 4px 15px rgba(128, 0, 255, 0.3);
+            box-shadow: 0 4px 15px rgba(57, 255, 20, 0.2);
             transition: opacity 0.2s, transform 0.2s;
         }
 
@@ -167,12 +181,12 @@
         footer {
             padding: 40px 20px;
             text-align: center;
-            color: #444455;
+            color: #445566;
             font-size: 0.85rem;
-            border-top: 1px solid #111;
+            border-top: 1px solid var(--border-color);
         }
 
-        /* Responsividade para telas maiores (computadores/tablets deitados) */
+        /* Responsividade para computadores/tablets */
         @media (min-width: 768px) {
             .services-grid {
                 display: grid;
@@ -184,15 +198,11 @@
                 border-radius: 0 0 12px 12px;
                 border-left: 1px solid var(--border-color);
                 border-top: 5px solid transparent;
-                border-image: linear-gradient(90deg, var(--primary-blue), var(--primary-purple)) 1 100%;
+                border-image: linear-gradient(90deg, var(--accent-green), var(--accent-orange)) 1 100%;
             }
 
             .service-card:hover {
                 transform: translateY(-5px);
-            }
-            
-            h2 {
-                font-size: 2.1rem;
             }
         }
     </style>
@@ -201,20 +211,28 @@
 
     <header>
         <div class="logo-container">
-            <!-- Salve sua imagem com fundo transparente como logo.png na mesma pasta do index.html -->
             <img src="logo.png" alt="D-Oryzon Logo" class="logo-img">
         </div>
-        <p class="subtitle">Automação Inteligente e Suporte Tecnológico Especializado</p>
+        <p class="subtitle">Sistemas Inteligentes, Infraestrutura de Redes e Marketing Digital</p>
     </header>
 
     <div class="container">
         
+        <section class="info-section">
+            <h2>Sobre o Especialista</h2>
+            <p>Olá! Sou o desenvolvedor e técnico por trás da D-Oryzon. Possuo formação Técnica em Eletrônica, o que me deu uma base sólida para compreender o hardware desde os seus componentes mais fundamentais. Atualmente, expando meus conhecimentos cursando Tecnologia em Análise e Desenvolvimento de Sistemas (ADS), unindo o mundo físico dos circuitos ao mundo lógico dos softwares de alta performance.</p>
+        </section>
+
+        <section class="info-section">
+            <h2>Nossa Missão</h2>
+            <p>A D-Oryzon nasceu com o objetivo claro de impulsionar comércios e empresas locais através do uso estratégico da tecnologia. Acreditamos que a automação e uma infraestrutura digital robusta não devem ser exclusividades de grandes multinacionais. Nosso propósito é criar um ecossistema tecnológico acessível, seguro e inteligente para tornar o mercado regional mais eficiente e lucrativo.</p>
+        </section>
+        
         <section class="video-section">
-            <h2>Demonstração Prática</h2>
-            <p>Monitore a temperatura de freezers e balcões comerciais preventivamente e evite a perda de mercadorias.</p>
+            <h2>Tecnologia na Prática</h2>
+            <p>Veja abaixo a simulação em software do nosso sistema de monitoramento térmico preventivo para freezers e balcões comerciais.</p>
             
             <div class="video-wrapper">
-                <!-- Certifique-se de salvar o arquivo como "11261.mp4" na mesma pasta do site no seu GitHub -->
                 <video controls preload="metadata" poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
                     <source src="11261.mp4" type="video/mp4">
                     Seu navegador não suporta a reprodução de vídeos.
@@ -222,24 +240,27 @@
             </div>
         </section>
 
-        <h2 style="margin-top: 40px;">Nossos Serviços</h2>
+        <h2>Nossos Serviços</h2>
         <div class="services-grid">
             <div class="service-card">
                 <h3>Sistemas Embarcados</h3>
-                <p>Desenvolvimento e programação de firmwares sob medida para automação comercial e controle de ativos em tempo real.</p>
+                <p>Desenvolvimento de firmwares sob medida e sensores inteligentes para controle de temperatura e prevenção de perdas de estoque em tempo real.</p>
             </div>
             <div class="service-card">
                 <h3>Infraestrutura de Rede</h3>
-                <p>Planejamento, instalação e otimização de cobertura Wi-Fi e cabeamento estruturado para o comércio local.</p>
+                <p>Planejamento, instalação e otimização de cobertura Wi-Fi e cabeamento estruturado para empresas e estabelecimentos comerciais.</p>
             </div>
             <div class="service-card">
                 <h3>Suporte & Hardware</h3>
-                <p>Montagem especializada, otimização de sistemas operacionais e manutenção de computadores de alto desempenho.</p>
+                <p>Montagem especializada de computadores para alta performance, otimização completa de sistemas operacionais e manutenção de ativos.</p>
+            </div>
+            <div class="service-card">
+                <h3>Tráfego Pago & Anúncios</h3>
+                <p>Configuração, gerenciamento e otimização de campanhas de anúncios nas plataformas digitais (Meta Ads) para atrair clientes qualificados para o seu negócio.</p>
             </div>
         </div>
 
         <div class="cta-container">
-            <!-- Insira seu número com DDD após o / no link abaixo -->
             <a href="https://wa.me/SEUNUMERODEWHATSAPP" class="btn-contact" target="_blank">Falar com Especialista no WhatsApp</a>
         </div>
 
