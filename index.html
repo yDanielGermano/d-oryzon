@@ -6,14 +6,14 @@
     <title>D-Oryzon | Soluções em Tecnologia</title>
     <style>
         :root {
-            /* Cor exata do fundo da nova logo para perfeita integração */
-            --bg-color: #0e0422ff; 
-            --card-bg: #061125;
+            /* Cor exata enviada para o fundo do site */
+            --bg-color: #0e0422; 
+            --card-bg: #140830;
             --text-color: #ffffff;
-            --text-muted: #a3b8cc;
+            --text-muted: #bdaee3;
             --accent-green: #39ff14; /* Verde fósforo */
-            --accent-orange: #ff5e00; /* Pôr do sol */
-            --border-color: #0d2347;
+            --accent-purple: #0e0422; /* Roxo profundo da logo */
+            --border-color: #210e4a;
         }
 
         body {
@@ -27,7 +27,7 @@
 
         header {
             padding: 50px 20px 30px 20px;
-            background: linear-gradient(180deg, #0e0422ff 0%, var(--bg-color) 100%);
+            background: linear-gradient(180deg, #0e0422 0%, var(--bg-color) 100%);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -59,22 +59,23 @@
 
         .container {
             width: 90%;
-            max-width: 850px;
+            max-width: 950px;
             margin: 0 auto;
             padding: 20px 0;
+            text-align: center;
         }
 
         h2 {
             font-size: 1.8rem;
             margin-bottom: 20px;
-            background: linear-gradient(45deg, var(--accent-green), var(--accent-orange));
+            /* Gradiente ajustado: Verde fósforo para o Roxo Profundo */
+            background: linear-gradient(45deg, var(--accent-green), #9d4edd);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             display: inline-block;
         }
 
-        /* Novas Seções: Sobre e Objetivos */
         .info-section {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -120,6 +121,7 @@
             display: block;
         }
 
+        /* Grid de Serviços atualizada para comportar 6 itens simétricos */
         .services-grid {
             display: flex;
             flex-direction: column;
@@ -131,7 +133,7 @@
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-left: 5px solid transparent;
-            border-image: linear-gradient(180deg, var(--accent-green), var(--accent-orange)) 1 100%;
+            border-image: linear-gradient(180deg, var(--accent-green), #9d4edd) 1 100%;
             padding: 25px;
             border-radius: 0 12px 12px 0;
             transition: transform 0.2s, box-shadow 0.2s;
@@ -139,13 +141,13 @@
 
         .service-card:hover {
             transform: translateX(5px);
-            box-shadow: 0 4px 20px rgba(57, 255, 20, 0.1);
+            box-shadow: 0 4px 20px rgba(57, 255, 20, 0.08);
         }
 
         .service-card h3 {
             margin-top: 0;
             margin-bottom: 10px;
-            font-size: 1.4rem;
+            font-size: 1.35rem;
             color: #ffffff;
         }
 
@@ -162,8 +164,8 @@
 
         .btn-contact {
             display: inline-block;
-            background: linear-gradient(90deg, var(--accent-green) 0%, var(--accent-orange) 100%);
-            color: #000000; /* Preto para dar contraste no botão claro */
+            background: linear-gradient(90deg, var(--accent-green) 0%, #9d4edd 100%);
+            color: #000000;
             padding: 16px 35px;
             font-weight: 700;
             text-decoration: none;
@@ -182,16 +184,16 @@
         footer {
             padding: 40px 20px;
             text-align: center;
-            color: #445566;
+            color: #5d4f7c;
             font-size: 0.85rem;
             border-top: 1px solid var(--border-color);
         }
 
-        /* Responsividade para computadores/tablets */
+        /* Grid Responsivo: 3 Colunas idênticas em telas grandes */
         @media (min-width: 768px) {
             .services-grid {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                grid-template-columns: repeat(3, 1fr);
                 gap: 25px;
             }
             
@@ -199,7 +201,7 @@
                 border-radius: 0 0 12px 12px;
                 border-left: 1px solid var(--border-color);
                 border-top: 5px solid transparent;
-                border-image: linear-gradient(90deg, var(--accent-green), var(--accent-orange)) 1 100%;
+                border-image: linear-gradient(90deg, var(--accent-green), #9d4edd) 1 100%;
             }
 
             .service-card:hover {
@@ -212,20 +214,20 @@
 
     <header>
         <div class="logo-container">
-            <img src="medias/logo.png" alt="D-Oryzon Logo" class="logo-img">
+            <img src="logo.png" alt="D-Oryzon Logo" class="logo-img">
         </div>
-        <p class="subtitle">Sistemas Inteligentes, Infraestrutura de Redes e Marketing Digital</p>
+        <p class="subtitle">Soluções Completas em Automação, Desenvolvimento Web e Presença Digital</p>
     </header>
 
     <div class="container">
         
         <section class="info-section">
             <h2>Sobre o Especialista</h2>
-            <p>Olá, meu nome é Daniel Germano! Sou o desenvolvedor e técnico por trás da D-Oryzon. Possuo formação Técnica em Eletrônica na ETEC Júlio de Mesquita, o que me deu uma base sólida para compreender o hardware desde os seus componentes mais fundamentais. Atualmente, expando meus conhecimentos cursando Análise e Desenvolvimento de Sistemas (ADS) na FATEC São Caetano do Sul - Antônio Russo, unindo o mundo físico dos circuitos ao mundo lógico dos softwares de alta performance.</p>
+            <p>Olá, meu nome é Daniel Germano! Sou o desenvolvedor e técnico por trás da D-Oryzon. Possuo formação Técnica em Eletrônica na ETEC Julio de Mesquita, o que me deu uma base sólida para compreender o hardware desde os seus componentes mais fundamentais. Atualmente, expando meus conhecimentos cursando Análise e Desenvolvimento de Sistemas (ADS) na FATEC São Caetano do Sul - Antônio Russo, unindo o mundo físico dos circuitos ao mundo lógico dos softwares de alta performance.</p>
         </section>
 
         <section class="info-section">
-            <h2>Nossa Missão</h2>
+            <h2>Sobre nós</h2>
             <p>A D-Oryzon nasceu com o objetivo claro de impulsionar comércios e empresas locais através do uso estratégico da tecnologia. Acreditamos que a automação e uma infraestrutura digital robusta não devem ser exclusividades de grandes multinacionais. Nosso propósito é criar um ecossistema tecnológico acessível, seguro e inteligente para tornar o mercado regional mais eficiente e lucrativo.</p>
         </section>
         
@@ -235,7 +237,7 @@
             
             <div class="video-wrapper">
                 <video controls preload="metadata" poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
-                    <source src="medias/videoSensorTemperatura.mp4" type="video/mp4">
+                    <source src="videoSensorTemperatura.mp4" type="video/mp4">
                     Seu navegador não suporta a reprodução de vídeos.
                 </video>
             </div>
@@ -245,7 +247,7 @@
         <div class="services-grid">
             <div class="service-card">
                 <h3>Sistemas Embarcados</h3>
-                <p>Desenvolvimento de firmwares sob medida e sensores inteligentes para controle de temperatura e prevenção de perdas de estoque em tempo real.</p>
+                <p>Desenvolvimento de firmwares sob medida e sensores inteligentes para controle de temperatura, automações de processos e prevenção de perdas de estoque em tempo real.</p>
             </div>
             <div class="service-card">
                 <h3>Infraestrutura de Rede</h3>
@@ -259,10 +261,18 @@
                 <h3>Tráfego Pago & Anúncios</h3>
                 <p>Configuração, gerenciamento e otimização de campanhas de anúncios nas plataformas digitais (Meta Ads) para atrair clientes qualificados para o seu negócio.</p>
             </div>
+            <div class="service-card">
+                <h3>Desenvolvimento Web</h3>
+                <p>Criação e estruturação de Landing Pages, sites institucionais e e-commerces (lojas virtuais) com foco em conversão e experiência de usuário.</p>
+            </div>
+            <div class="service-card">
+                <h3>Artes Digitais & Design</h3>
+                <p>Criação de identidades visuais marcantes, logotipos, templates customizados e artes profissionais para publicações nas redes sociais do seu negócio.</p>
+            </div>
         </div>
 
         <div class="cta-container">
-            <a href="https://wa.me/5511967386410" class="btn-contact" target="_blank">Falar com Especialista no WhatsApp</a>
+            <a href="https://wa.me/5511967384610" class="btn-contact" target="_blank">Falar com Especialista no WhatsApp</a>
         </div>
 
     </div>
