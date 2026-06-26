@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Especialista | D-Oryzon</title>
+    <style>
+        /* [Estilos idênticos do index para manter o padrão visual] */
+        :root 
+        { 
+            --bg-color: #0e0422; 
+            --card-bg: #140830; 
+            --text-color: #ffffff; 
+            --text-muted: #bdaee3; 
+            --accent-green: #39ff14; 
+            --border-color: #210e4a; 
+        }
+        body 
+        { 
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            font-family: 'Segoe UI', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+        }
+
+        header 
+        { 
+            padding: 40px 20px 20px 20px; 
+            text-align: center; 
+        }
+
+        .logo-container 
+        { 
+            max-width: 320px; 
+            margin: 0 auto 20px auto; 
+            display: flex; 
+            justify-content: center; 
+        }
+
+        .logo-img 
+        { 
+            width: 100%; 
+            height: auto; 
+            object-fit: contain; 
+        }
+
+        nav 
+        { 
+            margin: 20px 0; 
+            display: flex; 
+            gap: 20px; 
+            justify-content: center; 
+            flex-wrap: wrap; 
+        }
+
+        nav a 
+        { 
+            color: var(--text-color); 
+            text-decoration: none; 
+            font-weight: 600; 
+            padding: 8px 16px; 
+            border-radius: 20px; 
+            border: 1px solid var(--border-color); 
+            transition: all 0.3s; 
+        }
+
+        nav a.active, nav a:hover 
+        { 
+            background-color: var(--accent-green); 
+            color: #000000; border-color: var(--accent-green); 
+        }
+        .container 
+
+        { 
+            width: 90%; 
+            max-width: 850px; 
+            margin: 0 auto; 
+            padding: 20px 0; 
+        }
+
+        h2 
+        { 
+            font-size: 1.8rem; 
+            margin-bottom: 20px; 
+            background: linear-gradient(45deg, var(--accent-green), #9d4edd); 
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            display: inline-block; 
+        }
+
+        .info-section 
+        { 
+            background-color: var(--card-bg); 
+            border: 1px solid var(--border-color); 
+            border-radius: 12px; 
+            padding: 30px; 
+            margin: 25px 0; 
+            text-align: left; 
+        }
+
+        .info-section p, .info-section li 
+        { 
+            color: var(--text-muted); 
+            font-size: 1.05rem; 
+        }
+
+        .info-section ul 
+        { 
+            padding-left: 20px; 
+        }
+
+        .info-section li 
+        { 
+            margin-bottom: 10px; 
+        }
+
+        .links-grid 
+        { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 15px; 
+            margin-top: 20px; 
+        }
+
+        .link-card 
+        { 
+            background: #080214; 
+            border: 1px solid var(--border-color); 
+            padding: 15px; 
+            border-radius: 8px; 
+            text-align: center; 
+        }
+
+        .link-card a 
+        { 
+            color: var(--accent-green); 
+            text-decoration: none; 
+            font-weight: bold; 
+        }
+
+        footer 
+        { 
+            padding: 40px 20px; 
+            text-align: center; 
+            color: #5d4f7c; 
+            font-size: 0.85rem; 
+            border-top: 1px solid var(--border-color); 
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="medias/logo.png" alt="D-Oryzon Logo" class="logo-img">
+        </div>
+
+        <nav>
+            <a href="index.html">A Empresa</a>
+            <a href="servicos.html">Nossos Serviços</a>
+            <a href="sobre.html" class="active">O Especialista</a>
+        </nav>
+
+    </header>
+
+    <div class="container">
+
+        <section class="info-section">
+
+            <h2>Daniel Germano</h2>
+            <p>Desenvolvedor de software independente e especialista em automação técnica de hardware e software embarcado.</p>
+            
+            <h3>Formação Acadêmica</h3>
+            <ul>
+                <li><strong>Curso Técnico em Eletrônica</strong> – ETEC Júlio de Mesquita<br>Base sólida em eletrônica digital, circuitos integrados, microcontroladores, instrumentação física e análise em bancada.</li>
+                <li><strong>Técnologo emAnálise e Desenvolvimento de Sistemas (ADS)</strong> – FATEC São Caetano do Sul - Antônio Russo(Cursando)<br>Foco em engenharia de software de alta performance, estruturas de dados, metodologias ágeis e arquiteturas para web e desktop.</li>
+            </ul>
+
+            <h3>Stack de Habilidades</h3>
+            <ul>
+                <li><strong>Linguagens:</strong> C, C++, C#, Python (Desenvolvimento de Jogos 2D e 2.5D /  Aplicações CLI / Ferramentas estruturadas) e JavaScript.</li>
+                <li><strong>Hardware/SEB:</strong> Desenvolvimento de firmware nativo, integração com sensores analógicos/digitais, displays e atuadores mecânicos.</li>
+                <li><strong>Web & Mobile:</strong> Manipulação nativa da árvore DOM, consumo e integração assíncrona de APIs de terceiros.</li>
+            </ul>
+
+        </section>
+
+        <section class="info-section">
+
+            <h2>Contato Direto & Redes</h2>
+            <p>Disponível para contratações diretas, projetos freelancers e consultorias técnicas corporativas.</p>
+            <div class="links-grid">
+                <div class="link-card"><strong>E-mail Comercial:</strong><br><a href="mailto:solucoestech.doryzon@gmail.com">Enviar E-mail</a></div>
+                <div class="link-card"><strong>Telefone Pessoal:</strong><br><a href="https://wa.me/5511967386410">(11) 96738-6410</a></div>
+                <div class="link-card"><strong>GitHub Portfólio:</strong><br><a href="https://github.com/yDanielGermano" target="_blank">Acessar Perfis</a></div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 D-Oryzon. Soluções Independentes em Tecnologia. Atendimento na Região do Grande ABC.</p>
+    </footer>
+
+</body>
+</html>

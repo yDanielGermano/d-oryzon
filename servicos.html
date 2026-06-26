@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços e Vitrine | D-Oryzon</title>
+    <style>
+
+        :root 
+        { 
+            --bg-color: #0e0422; 
+            --card-bg: #140830; 
+            --text-color: #ffffff; 
+            --text-muted: #bdaee3; 
+            --accent-green: #39ff14; 
+            --border-color: #210e4a; 
+        }
+
+        body 
+        { 
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0; 
+            padding: 0; 
+        }
+        header 
+        { 
+            padding: 40px 20px 20px 20px; 
+            text-align: center; 
+        }
+
+        .logo-container 
+        { 
+            max-width: 320px; 
+            margin: 0 auto 20px auto; 
+            display: flex; 
+            justify-content: center; 
+        }
+
+        .logo-img 
+        { 
+            width: 100%; 
+            height: auto; 
+            object-fit: contain; 
+        }
+        
+        nav 
+        { 
+            margin: 20px 0; 
+            display: flex; 
+            gap: 20px; 
+            justify-content: center; 
+            flex-wrap: wrap; 
+        }
+        
+        nav a 
+        { 
+            color: var(--text-color); 
+            text-decoration: none; 
+            font-weight: 600; 
+            padding: 8px 16px; 
+            border-radius: 20px; 
+            border: 1px solid var(--border-color); 
+            transition: all 0.3s; 
+        }
+        
+        nav a.active, nav a:hover 
+        { 
+            background-color: var(--accent-green); 
+            color: #000000; 
+            border-color: var(--accent-green); 
+        }
+        .container 
+        { 
+            width: 90%; 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            padding: 20px 0; 
+        }
+
+        h2 
+        { 
+            font-size: 1.8rem; margin-bottom: 20px; 
+            background: linear-gradient(45deg, var(--accent-green), #9d4edd); 
+            background-clip: text;
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            display: inline-block; 
+        }
+        
+        .video-proof 
+        { 
+            background-color: var(--card-bg); 
+            border: 1px solid var(--border-color); 
+            border-radius: 12px; 
+            padding: 20px; 
+            margin-bottom: 40px; 
+            text-align: center; 
+        }
+
+        .video-wrapper 
+        { 
+            max-width: 700px; 
+            margin: 0 auto; 
+            border-radius: 8px; 
+            overflow: hidden; 
+            border: 1px solid var(--border-color); 
+        }
+
+        video 
+        { 
+            width: 100%; 
+            display: block; 
+        }
+
+        /* Grade do E-commerce de Serviços */
+        .products-grid 
+        { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; 
+            margin: 30px 0; 
+        }
+
+        .product-card
+        { 
+            background-color: var(--card-bg); 
+            border: 1px solid var(--border-color); 
+            border-radius: 12px; 
+            padding: 25px; 
+            text-align: left; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: space-between; 
+            position: relative; 
+            transition: transform 0.2s; 
+        }
+
+        .product-card:hover 
+        { 
+            transform: translateY(-5px); 
+        }
+
+        .product-card h3 
+        { 
+            margin-top: 0; 
+            color: #ffffff; 
+            font-size: 1.3rem; 
+        }
+
+        .product-card p 
+        { 
+            color: var(--text-muted); 
+            font-size: 0.95rem; 
+            margin-bottom: 20px; 
+        }
+
+        .price-tag 
+        { 
+            font-size: 1.6rem; 
+            color: var(--accent-green); 
+            font-weight: 700; 
+            margin-bottom: 15px; 
+        }
+
+        .price-sub 
+        { 
+            font-size: 0.8rem; 
+            color: #7f6fa6; 
+            display: block; 
+            font-weight: normal; 
+            margin-top: -5px; 
+        }
+
+        .btn-buy 
+        { 
+            display: block; 
+            text-align: center; 
+            background: #080214; 
+            border: 1px solid var(--accent-green); 
+            color: var(--accent-green); 
+            padding: 10px; 
+            border-radius: 6px; 
+            font-weight: bold; 
+            text-decoration: none; 
+            transition: all 0.3s; 
+        }
+
+        .btn-buy:hover 
+        { 
+            background: var(--accent-green); 
+            color: #000000; 
+        }
+
+        footer 
+        { 
+            padding: 40px 20px; 
+            text-align: center; 
+            color: #5d4f7c; 
+            font-size: 0.85rem; 
+            border-top: 1px solid var(--border-color); 
+        }
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="medias/logo.png" alt="D-Oryzon Logo" class="logo-img">
+        </div>
+        <nav>
+            <a href="index.html">A Empresa</a>
+            <a href="servicos.html" class="active">Nossos Serviços</a>
+            <a href="sobre.html">O Especialista</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        
+        <section class="video-proof">
+            <h2>Nossa Validação Técnica</h2>
+            <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 20px auto;">Veja a simulação operacional do nosso módulo embarcado rodando em tempo real no laboratório de testes.</p>
+            <div class="video-wrapper">
+                <video controls preload="metadata" poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                    <source src="medias/videoSensorTemperatura.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <h2>Tabela Padronizada de Soluções</h2>
+        <div class="products-grid">
+            
+            <div class="product-card">
+                <div>
+                    <h3>Manutenção & Upgrade Essencial</h3>
+                    <p>Substituição física de componentes de alta taxa de falha em Notebooks/PCs: Instalação estruturada de SSDs, HDs ou troca de baterias viciadas.</p>
+                </div>
+                <div>
+                    <div class="price-tag">R$ 150,00 <span class="price-sub">*Excluindo valor das peças</span></div>
+                    <a href="https://wa.me/5511967386410?text=Olá!+Quero+agendar+uma+Manutenção+Essencial" class="btn-buy" target="_blank">Solicitar Serviço</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div>
+                    <h3>Otimização Fina de Sistema (S.O)</h3>
+                    <p>Formatação limpa e estruturação lógica de Sistemas Operacionais (Windows/Linux) com limpeza de bloatwares para recuperação total de performance.</p>
+                </div>
+                <div>
+                    <div class="price-tag">R$ 120,00 <span class="price-sub">Valor fechado por máquina</span></div>
+                    <a href="https://wa.me/5511967386410?text=Olá!+Quero+uma+Otimização+de+Sistema" class="btn-buy" target="_blank">Solicitar Serviço</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div>
+                    <h3>Site Institucional / Landing Page</h3>
+                    <p>Desenvolvimento web completo de página corporativa responsiva e profissional para posicionar sua marca no Google e captar clientes locais.</p>
+                </div>
+                <div>
+                    <div class="price-tag">R$ 800,00 <span class="price-sub">Sob consulta de escopo</span></div>
+                    <a href="https://wa.me/5511967386410?text=Olá!+Gostaria+de+um+orçamento+para+Site+Institucional" class="btn-buy" target="_blank">Solicitar Serviço</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div>
+                    <h3>Identidade Visual & Logo Premium</h3>
+                    <p>Desenvolvimento e vetorização de logotipos e paletas estruturadas para marcas comerciais se destacarem de forma profissional no mercado.</p>
+                </div>
+                <div>
+                    <div class="price-tag">R$ 350,00 <span class="price-sub">Entrega em PNG/Vetor</span></div>
+                    <a href="https://wa.me/5511967386410?text=Olá!+Quero+criar+uma+Identidade+Visual" class="btn-buy" target="_blank">Solicitar Serviço</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div>
+                    <h3>Aplicações CLI & Automação</h3>
+                    <p>Criação de scripts lógicos e programas baseados em terminal (C#, Python) para processamento em massa e automação corporativa customizada.</p>
+                </div>
+                <div>
+                    <div class="price-tag">R$ 450,00 <span class="price-sub">Valor base por escopo básico</span></div>
+                    <a href="https://wa.me/5511967386410?text=Olá!+Quero+uma+automação+CLI" class="btn-buy" target="_blank">Solicitar Serviço</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div>
+                    <h3>Módulo IoT de Monitoramento</h3>
+                    <p>Desenvolvimento de firmware integrado a sensores físicos para prevenção de quebra e controle automático térmico comercial.</p>
+                </div>
+                <div>
+                    <div class="price-tag">A combinar <span class="price-sub">Dependente de insumos de hardware</span></div>
+                    <a href="https://wa.me/5511967386410?text=Olá!+Gostaria+de+um+projeto+de+Módulo+IoT" class="btn-buy" target="_blank">Consultar Projeto</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 D-Oryzon. Soluções Independentes in Tecnologia. Atendimento na Região do ABC.</p>
+    </footer>
+
+</body>
+</html>
